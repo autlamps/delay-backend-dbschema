@@ -80,6 +80,7 @@ CREATE TABLE IF NOT EXISTS stop_times (
 CREATE TABLE IF NOT EXISTS users (
   user_id UUID NOT NULL UNIQUE,
   email text,
+  name text,
   password bytea,
   date_created TIMESTAMPTZ,
   PRIMARY KEY (user_id)
