@@ -102,6 +102,7 @@ CREATE TABLE IF NOT EXISTS notification (
   type char(1),
   name text,
   value text,
+  date_created TIMESTAMPTZ,
   CONSTRAINT notification_user_id_fkey FOREIGN KEY (user_id)
     REFERENCES users (user_id) MATCH SIMPLE
     ON UPDATE NO ACTION ON DELETE NO ACTION,
