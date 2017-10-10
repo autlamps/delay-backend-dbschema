@@ -147,8 +147,8 @@ CREATE TABLE IF NOT EXISTS notification_event (
 );
 
 CREATE TABLE IF NOT EXISTS sub_notification (
-  sub_id UUID NOT NULL UNIQUE,
-  notification_id UUID NOT NULL UNIQUE,
+  sub_id UUID NOT NULL,
+  notification_id UUID NOT NULL,
   CONSTRAINT sub_notification_sub_id_fkey FOREIGN KEY (sub_id)
     REFERENCES subscription (sub_id) MATCH SIMPLE
     ON UPDATE NO ACTION ON DELETE NO ACTION,
