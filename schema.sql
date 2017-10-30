@@ -82,6 +82,7 @@ CREATE TABLE IF NOT EXISTS users (
   email text UNIQUE,
   name text,
   password bytea,
+  email_confirmed BOOLEAN,
   date_created TIMESTAMPTZ,
   PRIMARY KEY (user_id)
 );
